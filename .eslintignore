@@ -1,0 +1,5 @@
+# Exclude all by default
+*
+# Include "src" directory
+!src/
+!src/**
