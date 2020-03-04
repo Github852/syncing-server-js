@@ -1,0 +1,60 @@
+{
+  "name": "syncing-server",
+  "version": "1.0.0",
+  "description": "Standard Notes syncing server",
+  "main": "index.js",
+  "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "format": "prettier --write \"src/*.+(json|md|yml|yaml)\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.+(js)": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.+(json|md|yml|yaml)": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.17.0",
+    "husky": "^4.0.7",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/standardnotes/syncing-server-js.git"
+  },
+  "keywords": [
+    "standard",
+    "notes",
+    "sync",
+    "syncing",
+    "server",
+    "notes"
+  ],
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/standardnotes/syncing-server-js/issues"
+  },
+  "homepage": "https://github.com/standardnotes/syncing-server-js#readme"
+}
